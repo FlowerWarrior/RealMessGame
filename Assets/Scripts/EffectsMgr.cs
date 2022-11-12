@@ -17,6 +17,8 @@ public class EffectsMgr : MonoBehaviour
     internal static EffectsMgr instance;
     internal static System.Action EnableScrabledWords;
     internal static System.Action DisableScrabledWords;
+    internal static System.Action WaterRisen;
+    internal static System.Action WaterFallen;
 
     List<GameObject> activeCupMeshes = new List<GameObject>();
 
@@ -67,10 +69,12 @@ public class EffectsMgr : MonoBehaviour
             case PropType.Cup:
                 waterEffectPlane.SetActive(true);
                 waterEffectPlane.GetComponent<Animator>().SetInteger("state", 0);
+                WaterRisen?.Invoke();
                 break;
             case PropType.DrinkCan:
                 waterEffectPlane.SetActive(true);
                 waterEffectPlane.GetComponent<Animator>().SetInteger("state", 0);
+                WaterRisen?.Invoke();
                 break;
             case PropType.KnifeForkSpoon:
                 psKnifesSpoon.gameObject.SetActive(true);
@@ -131,10 +135,12 @@ public class EffectsMgr : MonoBehaviour
             case PropType.Cup:
                 yield return new WaitForSeconds(sec);
                 waterEffectPlane.GetComponent<Animator>().SetInteger("state", 1);
+                WaterFallen?.Invoke();
                 break;
             case PropType.DrinkCan:
                 yield return new WaitForSeconds(sec);
                 waterEffectPlane.GetComponent<Animator>().SetInteger("state", 1);
+                WaterFallen?.Invoke();
                 break;
             case PropType.KnifeForkSpoon:
                 yield return new WaitForSeconds(sec);

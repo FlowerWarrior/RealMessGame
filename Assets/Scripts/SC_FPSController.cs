@@ -19,6 +19,15 @@ public class SC_FPSController : MonoBehaviour
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
 
+    internal static System.Action<Vector3> Footstep;
+    internal static System.Action Jumped;
+    internal static System.Action PickedUp;
+    internal static System.Action PutDown;
+
+    [SerializeField] float footstepFreq;
+    [SerializeField] Transform groundPoint;
+    float footstepTimer = 0f;
+
     [HideInInspector]
     public bool canMove = true;
 
@@ -62,6 +71,16 @@ public class SC_FPSController : MonoBehaviour
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
+
+        if (characterController.velocity.x > 0 && characterController.velocity.z > 0) 
+        {
+            footstepTimer += Time.deltaTime;
+            if (footstepTimer > footstepFreq)
+            {
+                footstepTimer = 0f;
+                Footstep?.Invoke(groundPoint.position);
+            }
+        }
 
         // Player and Camera rotation
         if (canMove)

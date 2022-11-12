@@ -28,6 +28,8 @@ public class GameMgr : MonoBehaviour
 
     internal static System.Action OnTimeForBlink;
     internal static System.Action PropsReshuffled;
+    internal static System.Action PickSuccess;
+    internal static System.Action PickFailed;
     internal static GameMgr instance;
 
     private void Awake()
