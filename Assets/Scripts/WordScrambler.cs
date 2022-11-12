@@ -13,13 +13,13 @@ public class WordScrambler : MonoBehaviour
     private void OnEnable()
     {
         EffectsMgr.EnableScrabledWords += EnableScramble;
-        EffectsMgr.EnableScrabledWords += DisableScramble;
+        EffectsMgr.DisableScrabledWords += DisableScramble;
     }
 
     private void OnDisable()
     {
         EffectsMgr.EnableScrabledWords -= EnableScramble;
-        EffectsMgr.EnableScrabledWords -= DisableScramble;
+        EffectsMgr.DisableScrabledWords -= DisableScramble;
     }
 
     private void Start()

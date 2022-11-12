@@ -30,6 +30,16 @@ public class EffectsMgr : MonoBehaviour
         instance = this;
     }
 
+    private void OnEnable()
+    {
+        BlinkingScreen.EyesFullyClosed += DisableAllEffects;
+    }
+
+    private void OnDisable()
+    {
+        BlinkingScreen.EyesFullyClosed -= DisableAllEffects;
+    }
+
     private void Update()
     {
         transform.position = playerController.transform.position;
@@ -143,10 +153,12 @@ public class EffectsMgr : MonoBehaviour
             case PropType.Cup:
                 yield return new WaitForSeconds(sec);
                 waterEffectPlane.GetComponent<Animator>().SetInteger("state", 1);
+                print("water clear");
                 WaterFallen?.Invoke();
                 break;
             case PropType.DrinkCan:
                 yield return new WaitForSeconds(sec);
+                print("water clear");
                 waterEffectPlane.GetComponent<Animator>().SetInteger("state", 1);
                 WaterFallen?.Invoke();
                 break;
@@ -172,6 +184,27 @@ public class EffectsMgr : MonoBehaviour
             case PropType.Tomato:
                 tomatoEffectMgr.DisableTomatoes();
                 break;
+        }
+    }
+
+    private void DisableAllEffects()
+    {
+        print("hello");
+        for (int i = 0; i < 12; i++)
+        {
+            DisableEffectAfter(PropType.Book, 0);
+            DisableEffectAfter(PropType.Cap, 0);
+            DisableEffectAfter(PropType.Cup, 0);
+            DisableEffectAfter(PropType.DrinkCan, 0);
+            DisableEffectAfter(PropType.Hammer, 0);
+            DisableEffectAfter(PropType.Headphones, 0);
+            DisableEffectAfter(PropType.KnifeForkSpoon, 0);
+            DisableEffectAfter(PropType.Lamp, 0);
+            DisableEffectAfter(PropType.Lightbulb, 0);
+            DisableEffectAfter(PropType.Medicine, 0);
+            DisableEffectAfter(PropType.Shoes, 0);
+            DisableEffectAfter(PropType.Tomato, 0);
+            //DisableEffectAfter(PropType.Plant, 0);
         }
     }
 }

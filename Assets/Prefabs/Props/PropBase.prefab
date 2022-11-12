@@ -48,10 +48,11 @@ MonoBehaviour:
   propType: 0
   myOutline: {fileID: 8671618079381241241}
   myMeshT: {fileID: 1657081394993958466}
-  myMeshFilter: {fileID: 2584822730615023}
+  regularFilter: {fileID: 2584822730615023}
+  glitchedFilter: {fileID: 526203701365626722}
   regularRenderer: {fileID: 2479555733823169691}
   glitchedRenderer: {fileID: 6409710824453536663}
-  myMeshCollider: {fileID: 1098366290258353018}
+  myMeshCollider: {fileID: 4035510215031397574}
   colOutlineGreen:
     serializedVersion: 2
     rgba: 4294661256
@@ -183,7 +184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1657081394993958466}
-  - component: {fileID: 1098366290258353018}
+  - component: {fileID: 4035510215031397574}
   m_Layer: 3
   m_Name: Mesh
   m_TagString: Untagged
@@ -209,7 +210,7 @@ Transform:
   m_Father: {fileID: 2407867199522477273}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1098366290258353018
+--- !u!64 &4035510215031397574
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

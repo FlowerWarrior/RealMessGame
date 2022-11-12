@@ -11,11 +11,13 @@ public class TomatoEffect : MonoBehaviour
 
     public void EnableTomatoes()
     {
+        print("enabled");
         StartCoroutine(SpawnTomato());
     }
 
     public void DisableTomatoes()
     {
+        print("disabled");
         StopAllCoroutines();
     }
 

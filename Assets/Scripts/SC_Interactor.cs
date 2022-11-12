@@ -121,6 +121,9 @@ public class SC_Interactor : MonoBehaviour
 
     private void ExitHoldingProp()
     {
+        if (!isHoldingProp)
+            return;
+
         isHoldingProp = false;
         scFpsController.EnableControls();
         GameMgr.instance.ToggleHoldPropUI(false);
