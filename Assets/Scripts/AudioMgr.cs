@@ -38,6 +38,8 @@ public class AudioMgr : MonoBehaviour
     public void CycleThroughAmbientAudio()
     {
         ambientCycle++;
+        if (ambientCycle >= ambientAudioClips.Length)
+            ambientCycle = 0;
         ambientAudioSource.clip = ambientAudioClips[ambientCycle];
     }
 

@@ -42,7 +42,7 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9319de358c8adc04bade05bd2577cf05, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -170,7 +170,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9319de358c8adc04bade05bd2577cf05, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -306,7 +306,8 @@ MonoBehaviour:
     type: 3}
   ambientAudioSource: {fileID: 850768456974746503}
   musicEffectSource: {fileID: 850768456153918804}
-  footsteps: []
+  footsteps:
+  - {fileID: 0}
   jump: {fileID: 8300000, guid: 0df72aefb89889841a617957ccf99745, type: 3}
   pickup: {fileID: 8300000, guid: a2cb0a94013e07b4686e0060f1c2bd3b, type: 3}
   putdown: {fileID: 8300000, guid: ff259a34d6c01af48a30677c089a29f3, type: 3}
@@ -319,3 +320,7 @@ MonoBehaviour:
   waterRise: {fileID: 8300000, guid: e794bd730da42fd409e89b85c6a091b2, type: 3}
   waterFall: {fileID: 8300000, guid: 0a306beee4e49984087e0593d390c5b6, type: 3}
   wordsScramble: {fileID: 0}
+  tomatoHit: {fileID: 0}
+  startBlink: {fileID: 0}
+  endBlink: {fileID: 0}
+  onEyesFullyClosed: {fileID: 0}

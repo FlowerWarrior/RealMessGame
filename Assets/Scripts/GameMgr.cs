@@ -46,6 +46,7 @@ public class GameMgr : MonoBehaviour
         panelTimer.SetActive(false);
         textSuccess.SetActive(false);
         textSuccess.SetActive(false);
+        txtChances.enabled = false;
         ToggleHoldPropUI(false);
 
         SpawnProps();

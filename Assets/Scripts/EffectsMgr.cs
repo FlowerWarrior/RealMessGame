@@ -162,7 +162,7 @@ public class EffectsMgr : MonoBehaviour
                 yield return new WaitForSeconds(sec);
                 if (globalVolume.profile.TryGet<LensDistortion>(out LensDistortion tempDist))
                 {
-                    tempDist.active = true;
+                    tempDist.active = false;
                 }
                 break;
             case PropType.Hammer:
