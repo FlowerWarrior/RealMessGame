@@ -418,7 +418,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 7.0,
+    "m_Value": 20.899999618530275,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -907,7 +907,7 @@
     "m_ShaderOutputName": "In",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": 0.23000000417232514,
+        "x": 0.07000000029802323,
         "y": 0.0,
         "z": 0.0,
         "w": 0.0
@@ -1629,7 +1629,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 1.0,
+    "m_Value": 50.0,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
