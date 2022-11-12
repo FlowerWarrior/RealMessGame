@@ -1020,20 +1020,14 @@ Transform:
   - {fileID: 563237147}
   - {fileID: 27553383}
   - {fileID: 1047962738}
-<<<<<<< Updated upstream
-=======
   - {fileID: 1933811250}
   - {fileID: 2027465472}
->>>>>>> Stashed changes
   - {fileID: 563022637}
   - {fileID: 630898606}
   - {fileID: 482198807}
-<<<<<<< Updated upstream
   - {fileID: 2027465472}
   - {fileID: 630898606}
-=======
   - {fileID: 1223995370}
->>>>>>> Stashed changes
   m_Father: {fileID: 1511170793}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1617,11 +1611,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< Updated upstream
   m_RootOrder: 11
-=======
   m_RootOrder: 16
->>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &405845471
 PrefabInstance:
@@ -2016,11 +2007,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< Updated upstream
   m_RootOrder: 1
-=======
+
   m_RootOrder: 12
->>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &482198807 stripped
 Transform:
@@ -2715,11 +2704,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< Updated upstream
   m_RootOrder: 12
-=======
   m_RootOrder: 3
->>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &839593680
 GameObject:
@@ -2755,7 +2741,6 @@ Transform:
 --- !u!1 &853978287
 GameObject:
   m_ObjectHideFlags: 0
-<<<<<<< Updated upstream
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 360407062}
@@ -3413,7 +3398,6 @@ GameObject:
   m_IsActive: 0
 --- !u!198 &853978288
 ParticleSystem:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -15522,11 +15506,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 318542614}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
 --- !u!1 &1886909128
 =======
 --- !u!1 &1735517661
->>>>>>> Stashed changes
 =======
 --- !u!4 &1891937205 stripped
 Transform:
@@ -15535,7 +15517,6 @@ Transform:
   m_PrefabInstance: {fileID: 146176392}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1927715234
->>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15550,12 +15531,9 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-<<<<<<< Updated upstream
   m_IsActive: 0
 --- !u!198 &1735517662
 ParticleSystem:
-<<<<<<< HEAD
-=======
   m_IsActive: 1
 --- !u!114 &1886909129
 MonoBehaviour:
@@ -15579,10 +15557,9 @@ MonoBehaviour:
   lightingParticles: {fileID: 1518519457}
   tomatoEffectMgr: {fileID: 1494185951}
 --- !u!4 &1886909130
-=======
+
   m_IsActive: 1
 --- !u!4 &1927715235
->>>>>>> Stashed changes
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15597,7 +15574,6 @@ Transform:
   m_Father: {fileID: 1468740070}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
 --- !u!4 &1891937205 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2585075721184295311, guid: 142bf1125bd0a3f4b8d3a9f3bae6229f,
@@ -15606,14 +15582,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1927715234
 GameObject:
->>>>>>> Stashed changes
-=======
->>>>>>> parent of 96c2857 (Merge branch 'main' of https://github.com/FlowerWarrior/WasGameJam)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1927715235}
@@ -15639,14 +15611,12 @@ Transform:
   m_Father: {fileID: 1468740070}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
 --- !u!4 &1933811250 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6046223553581118546, guid: dee938a23facf6e4b8c849d02de68862,
     type: 3}
   m_PrefabInstance: {fileID: 2020594908}
   m_PrefabAsset: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!1 &1937413209
 GameObject:
   m_ObjectHideFlags: 0
@@ -20627,12 +20597,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-<<<<<<< Updated upstream
   m_Father: {fileID: 1886909130}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
+
 --- !u!1 &1757032975
 GameObject:
   m_ObjectHideFlags: 0
@@ -21036,8 +21004,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 648615523}
   m_PrefabAsset: {fileID: 0}
-=======
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
