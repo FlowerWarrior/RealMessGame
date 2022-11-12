@@ -8,10 +8,9 @@ public class Prop : MonoBehaviour
     [SerializeField] internal Outline myOutline;
     [SerializeField] internal Transform myMeshT;
     [SerializeField] MeshFilter myMeshFilter;
-    [SerializeField] MeshRenderer myMeshRenderer;
+    [SerializeField] MeshRenderer regularRenderer;
+    [SerializeField] MeshRenderer glitchedRenderer;
     [SerializeField] MeshCollider myMeshCollider;
-    [SerializeField] Material[] matsRegular;
-    [SerializeField] Material[] matsGlitched;
     [SerializeField] Color32 colOutlineGreen;
     [SerializeField] Color32 colOutlineRed;
     [SerializeField] internal Transform cupPoint;
@@ -27,11 +26,13 @@ public class Prop : MonoBehaviour
         meshOriginalRelPos = myMeshT.position - transform.position;
         if (isTarget)
         {
-            myMeshRenderer.materials = matsGlitched;
+            glitchedRenderer.enabled = true;
+            regularRenderer.enabled = false;
         }
         else
         {
-            myMeshRenderer.materials = matsRegular;
+            regularRenderer.enabled = true;
+            glitchedRenderer.enabled = false;
         }
     }
 
