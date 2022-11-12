@@ -73,6 +73,12 @@ public class Prop : MonoBehaviour
         myOutline.enabled = true;
         myOutline.OutlineColor = colOutlineRed;
     }
+
+    public void CancelOulineOverwrite()
+    {
+        isOutlineOverwrite = false;
+        myOutline.OutlineColor = Color.white;
+    }
 }
 
 public enum PropType

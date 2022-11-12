@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     [SerializeField] Animator fadeAnimator;
+    [SerializeField] int nextSceneID;
 
     private void OnEnable()
     {
@@ -17,16 +18,24 @@ public class SceneLoader : MonoBehaviour
         SC_Interactor.LevelEnded -= HandleLevelEnd;
     }
 
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            StartCoroutine(LoadLevelAfter(nextSceneID, 5f));
+        }
+    }
+
     void HandleLevelEnd(bool result)
     {
         int levelToLoad;
         if (result == true)
         {
-            levelToLoad = 0;
+            levelToLoad = nextSceneID;
         }
         else
         {
-            levelToLoad = 0;
+            levelToLoad = SceneManager.GetActiveScene().buildIndex;
         }
         StartCoroutine(LoadLevelAfter(levelToLoad, 2f));
     }
