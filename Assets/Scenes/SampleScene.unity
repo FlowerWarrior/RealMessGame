@@ -590,6 +590,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPS Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9022958042374456464, guid: 6ef8fe61639554e468598a6d09e0670b,
+        type: 3}
+      propertyPath: groundPoint
+      value: 
+      objectReference: {fileID: 1634423322}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ef8fe61639554e468598a6d09e0670b, type: 3}
 --- !u!1 &249261991
@@ -8709,6 +8714,12 @@ Transform:
   m_Father: {fileID: 1511170793}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1634423322 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1742310739815784183, guid: 6ef8fe61639554e468598a6d09e0670b,
+    type: 3}
+  m_PrefabInstance: {fileID: 242584332}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1634982039
 GameObject:
   m_ObjectHideFlags: 0
