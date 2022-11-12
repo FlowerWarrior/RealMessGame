@@ -1702,6 +1702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeAnimator: {fileID: 1062723715}
+  nextSceneID: 0
 --- !u!4 &720488375
 Transform:
   m_ObjectHideFlags: 0

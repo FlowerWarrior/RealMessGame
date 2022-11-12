@@ -170,7 +170,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9319de358c8adc04bade05bd2577cf05, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -307,12 +307,15 @@ MonoBehaviour:
   ambientAudioSource: {fileID: 850768456974746503}
   musicEffectSource: {fileID: 850768456153918804}
   footsteps: []
-  jump: {fileID: 0}
-  pickup: {fileID: 0}
-  putdown: {fileID: 0}
-  pickSuccess: {fileID: 0}
-  pickFail: {fileID: 0}
-  ambientAudioClips: []
-  waterRise: {fileID: 0}
-  waterFall: {fileID: 0}
+  jump: {fileID: 8300000, guid: 0df72aefb89889841a617957ccf99745, type: 3}
+  pickup: {fileID: 8300000, guid: a2cb0a94013e07b4686e0060f1c2bd3b, type: 3}
+  putdown: {fileID: 8300000, guid: ff259a34d6c01af48a30677c089a29f3, type: 3}
+  pickSuccess: {fileID: 8300000, guid: 5e77a5e4a4d90bf47bd6b59b37ea4dee, type: 3}
+  pickFail: {fileID: 8300000, guid: b524699ce05a7dc4996ef47315d00b01, type: 3}
+  ambientAudioClips:
+  - {fileID: 8300000, guid: 7401677ad7c24554eb76767b12746f94, type: 3}
+  - {fileID: 8300000, guid: 1709f0081fd64f24e972347e1100fafc, type: 3}
+  - {fileID: 8300000, guid: 3df16ecf6dfb8a24a82972fad9b29209, type: 3}
+  waterRise: {fileID: 8300000, guid: e794bd730da42fd409e89b85c6a091b2, type: 3}
+  waterFall: {fileID: 8300000, guid: 0a306beee4e49984087e0593d390c5b6, type: 3}
   wordsScramble: {fileID: 0}
