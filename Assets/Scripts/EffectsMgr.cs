@@ -13,6 +13,7 @@ public class EffectsMgr : MonoBehaviour
     [SerializeField] GameObject waterEffectPlane;
     [SerializeField] ParticleSystem psKnifesSpoon;
     [SerializeField] GameObject lightingParticles;
+    [SerializeField] TomatoEffect tomatoEffectMgr;
 
     internal static EffectsMgr instance;
     internal static System.Action EnableScrabledWords;
@@ -94,6 +95,9 @@ public class EffectsMgr : MonoBehaviour
             case PropType.Hammer:
                 lightingParticles.SetActive(true);
                 break;
+            case PropType.Tomato:
+                tomatoEffectMgr.EnableTomatoes();
+                break;
         }
     }
 
@@ -164,6 +168,9 @@ public class EffectsMgr : MonoBehaviour
             case PropType.Hammer:
                 yield return new WaitForSeconds(0);
                 lightingParticles.SetActive(false);
+                break;
+            case PropType.Tomato:
+                tomatoEffectMgr.DisableTomatoes();
                 break;
         }
     }
