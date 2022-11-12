@@ -70,7 +70,7 @@ public class SC_Interactor : MonoBehaviour
                     LevelEnded?.Invoke(true);
                     inputsActive = false;
                 }
-                else if (chancesLeft > 0)
+                else if (chancesLeft > 1)
                 {
                     chancesLeft--;
                     activeProp.ForceShowRedOutline();
