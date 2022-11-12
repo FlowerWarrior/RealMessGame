@@ -21,6 +21,7 @@ public class GameMgr : MonoBehaviour
     [SerializeField] GameObject panelTutorial;
     [SerializeField] Material[] skyboxMats;
     [SerializeField] Vector3[] skyboxRots;
+    [SerializeField] TextMeshProUGUI txtChances;
 
     internal List<GameObject> activeProps = new List<GameObject>();
     List<GameObject> targetPropPrefabs = new List<GameObject>();
@@ -201,8 +202,16 @@ public class GameMgr : MonoBehaviour
     public void ShowTextFail()
     {
         ToggleHoldPropUI(false);
+        StartCoroutine(HideFailTextAfter());
         textFail.SetActive(true);
         isCountdownActive = false;
+    }
+
+    IEnumerator HideFailTextAfter()
+    {
+        yield return new WaitForSeconds(2);
+        textFail.SetActive(false);
+        isCountdownActive = true;
     }
 
     private void OnDrawGizmos()
@@ -215,5 +224,13 @@ public class GameMgr : MonoBehaviour
                 Gizmos.DrawWireSphere(pointsHolder.GetChild(i).position, 0.2f);
             }
         }
+    }
+
+    public IEnumerator ShowTextChances(int chancesLeft)
+    {
+        txtChances.text = $"{chancesLeft} CHANCES LEFT";
+        txtChances.enabled = true;
+        yield return new WaitForSeconds(1.5f);
+        txtChances.enabled = false;
     }
 }

@@ -19,6 +19,8 @@ public class EffectsMgr : MonoBehaviour
     internal static System.Action DisableScrabledWords;
     internal static System.Action WaterRisen;
     internal static System.Action WaterFallen;
+    internal static System.Action StartMusics;
+    internal static System.Action EndMusics;
 
     List<GameObject> activeCupMeshes = new List<GameObject>();
 
@@ -52,6 +54,7 @@ public class EffectsMgr : MonoBehaviour
                 break;
             case PropType.Headphones:
                 psMusic.gameObject.SetActive(true);
+                StartMusics?.Invoke();
                 break;
             case PropType.Shoes:
                 playerController.walkingSpeed = 2f;
@@ -117,6 +120,7 @@ public class EffectsMgr : MonoBehaviour
             case PropType.Headphones:
                 yield return new WaitForSeconds(sec);
                 psMusic.gameObject.SetActive(false);
+                EndMusics?.Invoke();
                 break;
             case PropType.Shoes:
                 yield return new WaitForSeconds(sec);

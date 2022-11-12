@@ -16,6 +16,7 @@ public class SC_Interactor : MonoBehaviour
     internal Prop activeProp;
     bool isHoldingProp = false;
     bool inputsActive = true;
+    int chancesLeft = 3;
 
     // Update is called once per frame
     void Update()
@@ -68,6 +69,14 @@ public class SC_Interactor : MonoBehaviour
                     GameMgr.instance.ShowTextSuccess();
                     LevelEnded?.Invoke(true);
                     inputsActive = false;
+                }
+                else if (chancesLeft > 0)
+                {
+                    chancesLeft--;
+                    activeProp.ForceShowRedOutline();
+                    GameMgr.instance.ShowTextFail();
+                    GameMgr.instance.StartCoroutine(GameMgr.instance.ShowTextChances(chancesLeft));
+                    inputsActive = true;
                 }
                 else
                 {
@@ -124,6 +133,7 @@ public class SC_Interactor : MonoBehaviour
         activeProp.myMeshT.rotation = activeProp.transform.rotation;
         activeProp.myMeshT.parent = activeProp.transform;
         activeProp.myMeshT.localScale = new Vector3(1f, 1f, 1f);
+        activeProp.CancelOulineOverwrite();
     }
 
     private void OnEnable()

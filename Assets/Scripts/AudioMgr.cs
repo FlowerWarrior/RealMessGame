@@ -5,6 +5,8 @@ using UnityEngine;
 public class AudioMgr : MonoBehaviour
 {
     [SerializeField] GameObject audioSourcePrefab;
+    [SerializeField] AudioSource ambientAudioSource;
+    [SerializeField] AudioSource musicEffectSource;
     [Header("Audio Sounds")]
     [SerializeField] AudioClip[] footsteps;
     [SerializeField] AudioClip jump;
@@ -12,7 +14,6 @@ public class AudioMgr : MonoBehaviour
     [SerializeField] AudioClip putdown;
     [SerializeField] AudioClip pickSuccess;
     [SerializeField] AudioClip pickFail;
-    [SerializeField] AudioSource ambientAudioSource;
     [SerializeField] AudioClip[] ambientAudioClips;
     [SerializeField] AudioClip waterRise;
     [SerializeField] AudioClip waterFall;
@@ -109,5 +110,15 @@ public class AudioMgr : MonoBehaviour
     private void PlayWordsScramble()
     {
         PlayAudioEffect(wordsScramble);
+    }
+
+    private void EnableMusicsEffect()
+    {
+        musicEffectSource.enabled = true;
+    }
+
+    private void DisableMusicsEffect()
+    {
+        musicEffectSource.enabled = false;
     }
 }

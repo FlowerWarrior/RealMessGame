@@ -57,10 +57,10 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 56ba4fc18f0ed5e4bb5b7b713bc7a56d, type: 2}
   colOutlineGreen:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4294661256
   colOutlineRed:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4278190335
   cupPoint: {fileID: 0}
   isTarget: 0
 --- !u!1 &4682334655484169651
