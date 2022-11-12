@@ -31,6 +31,7 @@ public class GameMgr : MonoBehaviour
     internal static System.Action PropsReshuffled;
     internal static System.Action PickSuccess;
     internal static System.Action PickFailed;
+    
     internal static GameMgr instance;
 
     private void Awake()
@@ -175,6 +176,7 @@ public class GameMgr : MonoBehaviour
         dirLight.colorTemperature = newTemp;
         dirLight.intensity = newIntensity;
         dirLight.transform.rotation = Quaternion.Euler(newRot);
+        AudioMgr.instance.CycleThroughAmbientAudio();
     }
 
     public void ToggleHoldPropUI(bool newState)
