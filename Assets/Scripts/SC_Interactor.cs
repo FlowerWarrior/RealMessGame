@@ -9,6 +9,7 @@ public class SC_Interactor : MonoBehaviour
     [SerializeField] LayerMask raycastLayer;
     [SerializeField] float rayDistance;
     [SerializeField] Transform propHolder;
+    [SerializeField] Vector3 heldPropScale;
 
     internal static System.Action<Outline> UpdateOutlines;
     internal static System.Action<bool> LevelEnded;
@@ -113,7 +114,7 @@ public class SC_Interactor : MonoBehaviour
         isHoldingProp = true;
         activeProp.myMeshT.position = propHolder.position;
         activeProp.myMeshT.parent = propHolder;
-        activeProp.myMeshT.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+        activeProp.myMeshT.localScale = heldPropScale;
         scFpsController.DisableControls();
         GameMgr.instance.ToggleHoldPropUI(true);
     }

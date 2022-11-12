@@ -18,6 +18,10 @@ public class AudioMgr : MonoBehaviour
     [SerializeField] AudioClip waterRise;
     [SerializeField] AudioClip waterFall;
     [SerializeField] AudioClip wordsScramble;
+    [SerializeField] AudioClip tomatoHit;
+    [SerializeField] AudioClip startBlink;
+    [SerializeField] AudioClip endBlink;
+    [SerializeField] AudioClip onEyesFullyClosed;
 
     bool soundsEnabled = true;
 
@@ -34,6 +38,8 @@ public class AudioMgr : MonoBehaviour
     public void CycleThroughAmbientAudio()
     {
         ambientCycle++;
+        if (ambientCycle >= ambientAudioClips.Length)
+            ambientCycle = 0;
         ambientAudioSource.clip = ambientAudioClips[ambientCycle];
     }
 
@@ -48,6 +54,12 @@ public class AudioMgr : MonoBehaviour
         EffectsMgr.WaterRisen += PlayWaterRise;
         EffectsMgr.WaterFallen += PlayWaterFall;
         EffectsMgr.EnableScrabledWords += PlayWordsScramble;
+        EffectsMgr.StartMusics += EnableMusicsEffect;
+        EffectsMgr.EndMusics += DisableMusicsEffect;
+        TomatoEffect.TomatoHitEffect += PlayTomatoHit;
+        BlinkingScreen.StartBlink += PlayStartBlink;
+        BlinkingScreen.EndBlink += PlayEndBlink;
+        BlinkingScreen.EyesFullyClosed += PlayEyesFullyClosed;
     }
 
     private void PlayAudioAtPoint(AudioClip clip, Vector3 location)
@@ -76,7 +88,7 @@ public class AudioMgr : MonoBehaviour
 
     private void PlayFootstep(Vector3 location)
     {
-        PlayAudioAtPoint(footsteps[Random.Range(0, footsteps.Length)], location);
+        PlayAudioEffect(footsteps[Random.Range(0, footsteps.Length)]);
     }
     private void PlayJump()
     {
@@ -120,5 +132,25 @@ public class AudioMgr : MonoBehaviour
     private void DisableMusicsEffect()
     {
         musicEffectSource.enabled = false;
+    }
+
+    private void PlayTomatoHit()
+    {
+        PlayAudioEffect(tomatoHit);
+    }
+
+    private void PlayStartBlink()
+    {
+        PlayAudioEffect(startBlink);
+    }
+
+    private void PlayEndBlink()
+    {
+        PlayAudioEffect(endBlink);
+    }
+
+    private void PlayEyesFullyClosed()
+    {
+        PlayAudioEffect(onEyesFullyClosed);
     }
 }

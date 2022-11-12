@@ -96,5 +96,6 @@ public enum PropType
     Headphones,
     Cap,
     Lamp,
-    KnifeForkSpoon
+    KnifeForkSpoon,
+    Tomato,
 }

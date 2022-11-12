@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5544223613624007046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5544223613624007040}
+  - component: {fileID: 5544223613624007047}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5544223613624007040
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5544223613624007046}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.173003, y: -6.8151956, z: 10.808924}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5544223613624007047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5544223613624007046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1278dbf16f2b201428aa604a3545e689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsHolder: {fileID: 0}
+  timeBetweenBlinks: 18
+  panelTimer: {fileID: 0}
+  timerSlider: {fileID: 0}
+  textSuccess: {fileID: 0}
+  textFail: {fileID: 0}
+  dirLight: {fileID: 0}
+  holdPropUI: {fileID: 0}
+  propPrefabsTemplate:
+  - {fileID: 1143627282892974702, guid: bd6a6eff915558740b760f1067cb8ace, type: 3}
+  - {fileID: 1143627282892974702, guid: 4f25526a9575b7347aca6c1d7ed24f3d, type: 3}
+  - {fileID: 1143627282892974702, guid: 55126438dcb75ca4887d6c4fcaadaaa3, type: 3}
+  - {fileID: 1143627282892974702, guid: b24181c6b58d7674783aaa68ab75d137, type: 3}
+  - {fileID: 1143627282892974702, guid: e802ef0de7bd6534c80d935e144afabe, type: 3}
+  - {fileID: 1143627282892974702, guid: ae64a7842ca596d4f9dacf4c84c96698, type: 3}
+  - {fileID: 1143627282892974702, guid: 0b0c86a3e23b7fd4680e1a23c655bcb4, type: 3}
+  - {fileID: 1143627282892974702, guid: 6cafece968ae8a549b7eb9ed75ed8684, type: 3}
+  - {fileID: 1143627282892974702, guid: 12df4ca279db7ef4f93c18cfe0365b3f, type: 3}
+  - {fileID: 1143627282892974702, guid: 3d231ccb598e8bc47869e9f4e2928cce, type: 3}
+  - {fileID: 1143627282892974702, guid: c84c1b2dedbb0144c8d4e49689bb3fdc, type: 3}
+  - {fileID: 1143627282892974702, guid: 839af7b6f12b67145b2f495498b10851, type: 3}
+  - {fileID: 1143627282892974702, guid: 081ca16d30837ed4c973c5461bec1cf8, type: 3}
+  - {fileID: 1143627282892974702, guid: 2a68106a54259404f956726f8c662660, type: 3}
+  - {fileID: 1143627282892974702, guid: 01f292965ef558444b4006ef6d15c0ae, type: 3}
+  - {fileID: 1143627282892974702, guid: 98a813fbe7238404abb3aa7c8a1cd0a0, type: 3}
+  targetPropCount: 3
+  panelTutorial: {fileID: 0}
+  skyboxMats:
+  - {fileID: 2100000, guid: 4662fc0c3b8b59047a1306e5cc1d0310, type: 2}
+  - {fileID: 2100000, guid: 2bd8959f5fbd3644aa33af1a155fc147, type: 2}
+  - {fileID: 2100000, guid: cc421da483ed06c49933077a621bff25, type: 2}
+  skyboxRots:
+  - {x: 53.236, y: -26.549, z: 2.879}
+  - {x: 65.3, y: -12.389, z: 16}
+  - {x: 42.828, y: 150, z: 177.651}
+  txtChances: {fileID: 0}

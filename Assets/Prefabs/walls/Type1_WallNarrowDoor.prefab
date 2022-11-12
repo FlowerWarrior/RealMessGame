@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8180033932123500408}
   - component: {fileID: 1448707931487299616}
   - component: {fileID: 5171083944790812476}
+  - component: {fileID: 5277063793631253274}
   m_Layer: 0
   m_Name: Type1_WallNarrowDoor
   m_TagString: Untagged
@@ -86,3 +87,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5277063793631253274
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8663710916653806846}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.04, y: 0.0050000036, z: 0.029999994}
+  m_Center: {x: -5.4711076e-16, y: 0.0025000009, z: 0.014999997}
