@@ -306,7 +306,13 @@ MonoBehaviour:
     type: 3}
   ambientAudioSource: {fileID: 850768456974746503}
   musicEffectSource: {fileID: 850768456153918804}
-  footsteps: []
+  footsteps:
+  - {fileID: 8300000, guid: 2c129958c4fe899489e2b5d434ba71d2, type: 3}
+  - {fileID: 8300000, guid: ea237da6e3345554ca5e9b254469da29, type: 3}
+  - {fileID: 8300000, guid: 46878996b8620024faf641dd4af657c6, type: 3}
+  - {fileID: 8300000, guid: e356e7b74ae2c54498c06d9fcb2ab3f3, type: 3}
+  - {fileID: 8300000, guid: 975d305ef3595564aae6b26f797638b0, type: 3}
+  - {fileID: 8300000, guid: c15f3dfe2f70d22499162a244e70a636, type: 3}
   jump: {fileID: 8300000, guid: 0df72aefb89889841a617957ccf99745, type: 3}
   pickup: {fileID: 8300000, guid: a2cb0a94013e07b4686e0060f1c2bd3b, type: 3}
   putdown: {fileID: 8300000, guid: ff259a34d6c01af48a30677c089a29f3, type: 3}
