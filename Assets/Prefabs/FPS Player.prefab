@@ -354,7 +354,7 @@ MonoBehaviour:
   playerCamera: {fileID: 1742310738523149271}
   lookSpeed: 2
   lookXLimit: 65
-  footstepFreq: 3
+  footstepTimeSpacing: 1.85
   groundPoint: {fileID: 1742310739815784183}
   canMove: 1
 --- !u!114 &2057705632

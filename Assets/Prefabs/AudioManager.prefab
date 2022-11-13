@@ -1,5 +1,133 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2131994127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2131994128}
+  - component: {fileID: 2131994129}
+  m_Layer: 0
+  m_Name: Thunder Loop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2131994128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131994127}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 850768457100712462}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2131994129
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131994127}
+  m_Enabled: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7c66749a195a005418682f333baf6e22, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 1
+  BypassListenerEffects: 1
+  BypassReverbZones: 1
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &850768456153918806
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +415,7 @@ Transform:
   m_Children:
   - {fileID: 850768456974746502}
   - {fileID: 850768456153918807}
+  - {fileID: 2131994128}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -306,6 +435,7 @@ MonoBehaviour:
     type: 3}
   ambientAudioSource: {fileID: 850768456974746503}
   musicEffectSource: {fileID: 850768456153918804}
+  lightingSource: {fileID: 2131994129}
   footsteps:
   - {fileID: 8300000, guid: ec55da4e72cee114cad2c7fceff6623c, type: 3}
   - {fileID: 8300000, guid: 2c129958c4fe899489e2b5d434ba71d2, type: 3}
@@ -314,7 +444,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e356e7b74ae2c54498c06d9fcb2ab3f3, type: 3}
   - {fileID: 8300000, guid: 975d305ef3595564aae6b26f797638b0, type: 3}
   - {fileID: 8300000, guid: c15f3dfe2f70d22499162a244e70a636, type: 3}
-  jump: {fileID: 8300000, guid: 0df72aefb89889841a617957ccf99745, type: 3}
+  jump: {fileID: 8300000, guid: 95ba3c984c091844c9323d4bda03b810, type: 3}
   pickup: {fileID: 8300000, guid: a2cb0a94013e07b4686e0060f1c2bd3b, type: 3}
   putdown: {fileID: 8300000, guid: ff259a34d6c01af48a30677c089a29f3, type: 3}
   pickSuccess: {fileID: 8300000, guid: 5e77a5e4a4d90bf47bd6b59b37ea4dee, type: 3}
@@ -325,8 +455,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3df16ecf6dfb8a24a82972fad9b29209, type: 3}
   waterRise: {fileID: 8300000, guid: 671bedcb38501e4499830b532037277c, type: 3}
   waterFall: {fileID: 8300000, guid: cdbd7a3acac739944b69ed41b8918d3d, type: 3}
-  wordsScramble: {fileID: 0}
-  tomatoHit: {fileID: 0}
+  wordsScramble: {fileID: 8300000, guid: 4d48b4ef006a3664fbe48edc3aa29ead, type: 3}
+  tomatoHit: {fileID: 8300000, guid: 232beb7db9b7b434aa90db1460a35ac2, type: 3}
   startBlink: {fileID: 8300000, guid: e728d062f6f3ad5478c54912631d9b62, type: 3}
   endBlink: {fileID: 8300000, guid: 759f635f6e406c848a57f0b6368d429f, type: 3}
   onEyesFullyClosed: {fileID: 0}

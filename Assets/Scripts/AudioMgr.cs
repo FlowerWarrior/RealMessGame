@@ -7,6 +7,7 @@ public class AudioMgr : MonoBehaviour
     [SerializeField] GameObject audioSourcePrefab;
     [SerializeField] AudioSource ambientAudioSource;
     [SerializeField] AudioSource musicEffectSource;
+    [SerializeField] AudioSource lightingSource;
     [Header("Audio Sounds")]
     [SerializeField] AudioClip[] footsteps;
     [SerializeField] AudioClip jump;
@@ -47,8 +48,8 @@ public class AudioMgr : MonoBehaviour
     {
         SC_FPSController.Footstep += PlayFootstep;
         SC_FPSController.Jumped += PlayJump;
-        SC_FPSController.PickedUp += PlayPickUp;
-        SC_FPSController.PutDown += PlayPutDown;
+        SC_Interactor.PickedUp += PlayPickUp;
+        SC_Interactor.PutDown += PlayPutDown;
         GameMgr.PickSuccess += PlayPickSuccess;
         GameMgr.PickFailed += PlayPickFail;
         EffectsMgr.WaterRisen += PlayWaterRise;
@@ -60,6 +61,8 @@ public class AudioMgr : MonoBehaviour
         BlinkingScreen.StartBlink += PlayStartBlink;
         BlinkingScreen.EndBlink += PlayEndBlink;
         BlinkingScreen.EyesFullyClosed += PlayEyesFullyClosed;
+        EffectsMgr.StartLightning += EnableLightning;
+        EffectsMgr.EndLightning += DisableLightning;
     }
 
     private void PlayAudioAtPoint(AudioClip clip, Vector3 location)
@@ -96,6 +99,7 @@ public class AudioMgr : MonoBehaviour
     }
     private void PlayPickUp()
     {
+        print("pciked");
         PlayAudioEffect(pickup);
     }
     private void PlayPutDown()
@@ -152,5 +156,15 @@ public class AudioMgr : MonoBehaviour
     private void PlayEyesFullyClosed()
     {
         PlayAudioEffect(onEyesFullyClosed);
+    }
+
+    private void EnableLightning()
+    {
+        lightingSource.enabled = true;
+    }
+
+    private void DisableLightning()
+    {
+        lightingSource.enabled = false;
     }
 }

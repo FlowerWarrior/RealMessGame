@@ -22,6 +22,8 @@ public class EffectsMgr : MonoBehaviour
     internal static System.Action WaterFallen;
     internal static System.Action StartMusics;
     internal static System.Action EndMusics;
+    internal static System.Action StartLightning;
+    internal static System.Action EndLightning;
 
     List<GameObject> activeCupMeshes = new List<GameObject>();
 
@@ -47,19 +49,20 @@ public class EffectsMgr : MonoBehaviour
 
     public void EnableEffect(PropType prop)
     {
+        StopCoroutine(DisableEffectAfter(prop, 3));
         switch (prop)
         {
             case PropType.Lightbulb:
                 if (globalVolume.profile.TryGet<Bloom>(out Bloom tempDof))
                 {
-                    tempDof.intensity.value = 3f;
+                    tempDof.intensity.value = 4f;
                     tempDof.threshold.value = 0.1f;
                 }
                 break;
             case PropType.Lamp:
                 if (globalVolume.profile.TryGet<Bloom>(out tempDof))
                 {
-                    tempDof.intensity.value = 3f;
+                    tempDof.intensity.value = 4f;
                     tempDof.threshold.value = 0.1f;
                 }
                 break;
@@ -69,7 +72,7 @@ public class EffectsMgr : MonoBehaviour
                 break;
             case PropType.Shoes:
                 playerController.walkingSpeed = 2f;
-                playerController.walkingSpeed = 2.5f;
+                playerController.runningSpeed = 2.5f;
                 break;
             case PropType.Cap:
                 for (int i = 0; i < GameMgr.instance.activeProps.Count; i++)
@@ -104,6 +107,7 @@ public class EffectsMgr : MonoBehaviour
                 break;
             case PropType.Hammer:
                 lightingParticles.SetActive(true);
+                StartLightning?.Invoke();
                 break;
             case PropType.Tomato:
                 tomatoEffectMgr.EnableTomatoes();
@@ -139,7 +143,7 @@ public class EffectsMgr : MonoBehaviour
             case PropType.Shoes:
                 yield return new WaitForSeconds(sec);
                 playerController.walkingSpeed = 4f;
-                playerController.walkingSpeed = 5f;
+                playerController.runningSpeed = 5f;
                 break;
             case PropType.Cap:
                 yield return new WaitForSeconds(sec);
@@ -168,7 +172,7 @@ public class EffectsMgr : MonoBehaviour
                 break;
             case PropType.Book:
                 yield return new WaitForSeconds(sec);
-                EnableScrabledWords?.Invoke();
+                DisableScrabledWords?.Invoke();
                 break;
             case PropType.Medicine:
                 yield return new WaitForSeconds(sec);
@@ -180,6 +184,7 @@ public class EffectsMgr : MonoBehaviour
             case PropType.Hammer:
                 yield return new WaitForSeconds(0);
                 lightingParticles.SetActive(false);
+                EndLightning?.Invoke();
                 break;
             case PropType.Tomato:
                 tomatoEffectMgr.DisableTomatoes();

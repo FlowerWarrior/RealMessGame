@@ -21,10 +21,8 @@ public class SC_FPSController : MonoBehaviour
 
     internal static System.Action<Vector3> Footstep;
     internal static System.Action Jumped;
-    internal static System.Action PickedUp;
-    internal static System.Action PutDown;
 
-    [SerializeField] float footstepFreq;
+    [SerializeField] float footstepTimeSpacing;
     [SerializeField] Transform groundPoint;
     float footstepTimer = 0f;
 
@@ -55,6 +53,7 @@ public class SC_FPSController : MonoBehaviour
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
             moveDirection.y = jumpSpeed;
+            Jumped?.Invoke();
         }
         else
         {
@@ -72,10 +71,12 @@ public class SC_FPSController : MonoBehaviour
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
 
-        if (characterController.velocity.x > 0 && characterController.velocity.z > 0) 
+        if (characterController.velocity.x != 0 || characterController.velocity.z != 0) 
         {
-            footstepTimer += Time.deltaTime;
-            if (footstepTimer > footstepFreq)
+            Vector3 walkVel = characterController.velocity;
+            walkVel.y = 0;
+            footstepTimer += Time.deltaTime * walkVel.magnitude;
+            if (footstepTimer > footstepTimeSpacing)
             {
                 footstepTimer = 0f;
                 Footstep?.Invoke(groundPoint.position);

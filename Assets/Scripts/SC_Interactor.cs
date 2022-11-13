@@ -13,6 +13,8 @@ public class SC_Interactor : MonoBehaviour
 
     internal static System.Action<Outline> UpdateOutlines;
     internal static System.Action<bool> LevelEnded;
+    internal static System.Action PickedUp;
+    internal static System.Action PutDown;
 
     internal Prop activeProp;
     bool isHoldingProp = false;
@@ -54,11 +56,13 @@ public class SC_Interactor : MonoBehaviour
                 {
                     EnterHoldingProp();
                     EffectsMgr.instance.EnableEffect(activeProp.propType);
+                    PickedUp?.Invoke();
                 }
                 else
                 {
                     ExitHoldingProp();
                     EffectsMgr.instance.StartCoroutine(EffectsMgr.instance.DisableEffectAfter(activeProp.propType, 3));
+                    PutDown?.Invoke();
                 }
             }
 
