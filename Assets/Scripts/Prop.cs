@@ -29,6 +29,13 @@ public class Prop : MonoBehaviour
         {
             glitchedRenderer.enabled = true;
             regularRenderer.enabled = false;
+            Outline oldOutline = myOutline;
+            myOutline = glitchedRenderer.gameObject.AddComponent<Outline>();
+            myOutline.OutlineColor = oldOutline.OutlineColor;
+            myOutline.enabled = oldOutline.enabled;
+            myOutline.OutlineMode = oldOutline.OutlineMode;
+            myOutline.OutlineWidth = oldOutline.OutlineWidth;
+            myOutline.name = oldOutline.name;
         }
         else
         {
@@ -40,7 +47,9 @@ public class Prop : MonoBehaviour
     void UpdateOutline(Outline activeOutline)
     {
         if (isOutlineOverwrite)
+        {
             return;
+        }
 
         if (activeOutline == myOutline)
         {

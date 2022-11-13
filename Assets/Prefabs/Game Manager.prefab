@@ -69,6 +69,7 @@ MonoBehaviour:
   - {fileID: 1143627282892974702, guid: 2a68106a54259404f956726f8c662660, type: 3}
   - {fileID: 1143627282892974702, guid: 01f292965ef558444b4006ef6d15c0ae, type: 3}
   - {fileID: 1143627282892974702, guid: 98a813fbe7238404abb3aa7c8a1cd0a0, type: 3}
+  - {fileID: 1143627282892974702, guid: dabed0694b493244595be12410080a24, type: 3}
   targetPropCount: 3
   panelTutorial: {fileID: 0}
   skyboxMats:
