@@ -10,6 +10,7 @@ public class EffectsMgr : MonoBehaviour
     [SerializeField] Volume globalVolume;
     [SerializeField] ParticleSystem psMusic;
     [SerializeField] GameObject cupMeshPrefab;
+    [SerializeField] Transform propHolder;
     [SerializeField] GameObject waterEffectPlane;
     [SerializeField] ParticleSystem psKnifesSpoon;
     [SerializeField] GameObject lightingParticles;
@@ -78,9 +79,12 @@ public class EffectsMgr : MonoBehaviour
                 for (int i = 0; i < GameMgr.instance.activeProps.Count; i++)
                 {
                     Transform cupPoint = GameMgr.instance.activeProps[i].GetComponent<Prop>().cupPoint;
-                    GameObject obj = (Instantiate(cupMeshPrefab, cupPoint.position, cupPoint.rotation));
-                    obj.transform.localScale = cupPoint.localScale;
-                    activeCupMeshes.Add(obj);
+                    if (cupPoint.parent != propHolder)
+                    {
+                        GameObject obj = (Instantiate(cupMeshPrefab, cupPoint.position, cupPoint.rotation));
+                        obj.transform.localScale = cupPoint.localScale;
+                        activeCupMeshes.Add(obj);
+                    }
                 }
                 break;
             case PropType.Cup:

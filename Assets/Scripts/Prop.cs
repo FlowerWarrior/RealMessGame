@@ -5,7 +5,6 @@ using UnityEngine;
 public class Prop : MonoBehaviour
 {
     [SerializeField] internal PropType propType;
-    [SerializeField] internal SpawnType spawnType;
     [SerializeField] internal Outline myOutline;
     [SerializeField] internal Transform myMeshT;
     [SerializeField] MeshFilter regularFilter;
@@ -24,7 +23,7 @@ public class Prop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myMeshCollider.sharedMesh = glitchedFilter.mesh;
+        myMeshCollider.sharedMesh = regularFilter.mesh;
         meshOriginalRelPos = myMeshT.position - transform.position;
         if (isTarget)
         {

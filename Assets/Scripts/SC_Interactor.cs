@@ -31,7 +31,7 @@ public class SC_Interactor : MonoBehaviour
             // Does the ray intersect any objects excluding the player layer
             if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, rayDistance, raycastLayer))
             {
-                activeProp = hit.collider.gameObject.transform.parent.gameObject.GetComponent<Prop>();
+                activeProp = hit.collider.gameObject.transform.parent.parent.gameObject.GetComponent<Prop>();
             }
             else
             {

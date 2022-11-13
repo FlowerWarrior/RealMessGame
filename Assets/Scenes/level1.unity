@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18204722, g: 0.22773907, b: 0.30739787, a: 1}
+  m_IndirectSpecularColor: {r: 0.18204671, g: 0.22773825, b: 0.30739686, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6900,6 +6900,7 @@ MonoBehaviour:
   psMusic: {fileID: 190471040}
   cupMeshPrefab: {fileID: 998307113321151610, guid: c64d054cbd13be34381e3e12ab89acaa,
     type: 3}
+  propHolder: {fileID: 1478649165}
   waterEffectPlane: {fileID: 1883330428}
   psKnifesSpoon: {fileID: 1660342996}
   lightingParticles: {fileID: 359336058}
@@ -7930,6 +7931,12 @@ GameObject:
 --- !u!1 &1478649164 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 332340672, guid: 6ef8fe61639554e468598a6d09e0670b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1478649161}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1478649165 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 332340673, guid: 6ef8fe61639554e468598a6d09e0670b,
     type: 3}
   m_PrefabInstance: {fileID: 1478649161}
   m_PrefabAsset: {fileID: 0}
