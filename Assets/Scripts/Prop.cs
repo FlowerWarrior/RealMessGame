@@ -108,4 +108,5 @@ public enum PropType
     Lamp,
     KnifeForkSpoon,
     Tomato,
+    Wine
 }

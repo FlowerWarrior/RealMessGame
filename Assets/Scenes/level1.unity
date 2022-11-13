@@ -6905,6 +6905,10 @@ MonoBehaviour:
   psKnifesSpoon: {fileID: 1660342996}
   lightingParticles: {fileID: 359336058}
   tomatoEffectMgr: {fileID: 1578936818}
+  waterMats:
+  - {fileID: 2100000, guid: 141d9d6ca43b6c843965491604c6deff, type: 2}
+  - {fileID: 2100000, guid: 3713cdf55df209a4db1101aca20948ef, type: 2}
+  - {fileID: 2100000, guid: a42086ac6c64ced45a3293cf4e7d7810, type: 2}
 --- !u!4 &960045101
 Transform:
   m_ObjectHideFlags: 0

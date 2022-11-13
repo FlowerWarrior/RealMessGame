@@ -15,6 +15,7 @@ public class EffectsMgr : MonoBehaviour
     [SerializeField] ParticleSystem psKnifesSpoon;
     [SerializeField] GameObject lightingParticles;
     [SerializeField] TomatoEffect tomatoEffectMgr;
+    [SerializeField] Material[] waterMats;
 
     internal static EffectsMgr instance;
     internal static System.Action EnableScrabledWords;
@@ -91,11 +92,19 @@ public class EffectsMgr : MonoBehaviour
                 waterEffectPlane.SetActive(true);
                 waterEffectPlane.GetComponent<Animator>().SetInteger("state", 0);
                 WaterRisen?.Invoke();
+                waterEffectPlane.GetComponent<MeshRenderer>().material = waterMats[0];
                 break;
             case PropType.DrinkCan:
                 waterEffectPlane.SetActive(true);
                 waterEffectPlane.GetComponent<Animator>().SetInteger("state", 0);
                 WaterRisen?.Invoke();
+                waterEffectPlane.GetComponent<MeshRenderer>().material = waterMats[1];
+                break;
+            case PropType.Wine:
+                waterEffectPlane.SetActive(true);
+                waterEffectPlane.GetComponent<Animator>().SetInteger("state", 0);
+                WaterRisen?.Invoke();
+                waterEffectPlane.GetComponent<MeshRenderer>().material = waterMats[2];
                 break;
             case PropType.KnifeForkSpoon:
                 psKnifesSpoon.gameObject.SetActive(true);
@@ -161,18 +170,21 @@ public class EffectsMgr : MonoBehaviour
             case PropType.Cup:
                 yield return new WaitForSeconds(sec);
                 waterEffectPlane.GetComponent<Animator>().SetInteger("state", 1);
-                print("water clear");
                 WaterFallen?.Invoke();
                 break;
             case PropType.DrinkCan:
                 yield return new WaitForSeconds(sec);
-                print("water clear");
+                waterEffectPlane.GetComponent<Animator>().SetInteger("state", 1);
+                WaterFallen?.Invoke();
+                break;
+            case PropType.Wine:
+                yield return new WaitForSeconds(sec);
                 waterEffectPlane.GetComponent<Animator>().SetInteger("state", 1);
                 WaterFallen?.Invoke();
                 break;
             case PropType.KnifeForkSpoon:
                 yield return new WaitForSeconds(sec);
-                psKnifesSpoon.gameObject.SetActive(true);
+                psKnifesSpoon.gameObject.SetActive(false);
                 break;
             case PropType.Book:
                 yield return new WaitForSeconds(sec);

@@ -42,6 +42,7 @@ public class AudioMgr : MonoBehaviour
         if (ambientCycle >= ambientAudioClips.Length)
             ambientCycle = 0;
         ambientAudioSource.clip = ambientAudioClips[ambientCycle];
+        ambientAudioSource.Play();
     }
 
     private void OnEnable()
