@@ -20,10 +20,15 @@ public class SceneLoader : MonoBehaviour
 
     private void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 0)
+        if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             StartCoroutine(LoadLevelAfter(nextSceneID, 5f));
         }
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Cursor.visible = true;
+        }
+
     }
 
     void HandleLevelEnd(bool result)
@@ -46,5 +51,13 @@ public class SceneLoader : MonoBehaviour
         fadeAnimator.Play("FadeClose", 0, 0);
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene(sceneID);
+    }
+    public void LoadScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+    public void ExitApp()
+    {
+        Application.Quit();
     }
 }
