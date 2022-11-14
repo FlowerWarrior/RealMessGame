@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsHolder: {fileID: 0}
-  timeBetweenBlinks: 18
+  timeBetweenBlinks: 10
   panelTimer: {fileID: 0}
   timerSlider: {fileID: 0}
   textSuccess: {fileID: 0}
